@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2017-02-25
+  cook_1: 1
+  cook_2: 1
+  cook_3: 1
+  eat_1: 1
+  eat_2: 1
+  eat_3: 1
+  eat_4: 1
+  eat_5: 1
+  eat_6: 1
+
+two:
+  date: 2017-02-25
+  cook_1: 1
+  cook_2: 1
+  cook_3: 1
+  eat_1: 1
+  eat_2: 1
+  eat_3: 1
+  eat_4: 1
+  eat_5: 1
+  eat_6: 1

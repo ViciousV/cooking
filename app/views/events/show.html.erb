@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @event.date %>
+</p>
+
+<p>
+  <strong>Cook 1:</strong>
+  <%= Coworker.find(@event.cook_1).email %>
+</p>
+
+<p>
+  <strong>Cook 2:</strong>
+  <%= Coworker.find(@event.cook_2).email %>
+</p>
+
+<p>
+  <strong>Cook 3:</strong>
+  <%= Coworker.find(@event.cook_3).email %>
+</p>
+
+<p>
+  <strong>Eat 1:</strong>
+  <%= Coworker.find(@event.eat_1).email %>
+</p>
+
+<p>
+  <strong>Eat 2:</strong>
+  <%= Coworker.find(@event.eat_2).email %>
+</p>
+
+<p>
+  <strong>Eat 3:</strong>
+  <%= Coworker.find(@event.eat_3).email %>
+</p>
+
+<p>
+  <strong>Eat 4:</strong>
+  <%= Coworker.find(@event.eat_4).email %>
+</p>
+
+<p>
+  <strong>Eat 5:</strong>
+  <%= Coworker.find(@event.eat_5).email %>
+</p>
+
+<p>
+  <strong>Eat 6:</strong>
+  <%= Coworker.find(@event.eat_6).email %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

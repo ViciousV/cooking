@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cooking</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+<%= link_to "Events", events_path %>
+<%= link_to "Registrieren", coworkers_path %>
+<%= link_to "Gallerie", images_path %> 
+ <%= yield %>
+  </body>
+</html>

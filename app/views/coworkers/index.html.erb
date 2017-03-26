@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Wer bist du?</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coworkers.each do |coworker| %>
+      <tr>
+        <td><%= coworker.name %></td>
+        <td><%= link_to 'auswählen', coworker %></td>
+        <td><%= link_to 'bearbeiten', edit_coworker_path(coworker) %></td>
+        <td><%= link_to 'löschen', coworker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'neu registrieren', new_coworker_path %>

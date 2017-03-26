@@ -1,0 +1,67 @@
+<%= form_for(event) do |f| %>
+  <% if event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cook_1, "Maitre de Cuisine" %>
+    <%= f.select :cook_1, @coworkers.map { |e| [e.email, e.id] } %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cook_2, "Souschef" %>
+    <%= f.select :cook_2, @coworkers.map { |e| [e.email, e.id] } %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cook_3, "Chef de Partie" %>
+    <%= f.select :cook_3, @coworkers.map { |e| [e.email, e.id] } %>
+  </div>
+
+  <div class="field">
+    <%= f.label :eat_1, "Erster am Tisch" %>
+    <%= f.select :eat_1, @coworkers.map { |e| [e.email, e.id] } %>
+  </div>
+
+  <div class="field">
+    <%= f.label :eat_2, "zweiter Platz" %>
+    <%= f.select :eat_2, @coworkers.map { |e| [e.email, e.id] } %>
+  </div>
+
+  <div class="field">
+    <%= f.label :eat_3, "dritter Platz" %>
+    <%= f.select :eat_3, @coworkers.map { |e| [e.email, e.id] } %>
+  </div>
+
+  <div class="field">
+    <%= f.label :eat_4, "vierter Platz"%>
+    <%= f.select :eat_4, @coworkers.map { |e| [e.email, e.id] } %>
+  </div>
+
+  <div class="field">
+    <%= f.label :eat_5, "vorletzer Platz" %>
+    <%= f.select :eat_5, @coworkers.map { |e| [e.email, e.id] } %>
+  </div>
+
+  <div class="field">
+    <%= f.label :eat_6, "The Lucky One" %>
+    <%= f.select :eat_6, @coworkers.map { |e| [e.email, e.id] }%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Path:</strong>
+  <%= image_tag(@image.path_url, width: 600) if @image.path.present? %>
+  <h3>Comment</h3>
+  <% @comments.each do |comment| %>
+    <div>
+      <strong><%=comment.user_name %></strong>
+      <br />
+      <p><%= comment.body %></p>
+      <p><%= link_to 'löschen', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    </div>
+  <% end %>
+  <%= render 'comments/form', comment: @comment %>
+</p>
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>
